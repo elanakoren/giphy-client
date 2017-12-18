@@ -5,6 +5,10 @@ export function receiveGifs(gifs) {
     return {type: types.RECEIVE_GIFS, gifs};
 }
 
+export function fetchTodosRequest() {
+    return {type: types.FETCH_GIFS}
+}
+
 export function fetchGifs() {
     return dispatch => {
         const options = {
@@ -17,7 +21,8 @@ export function fetchGifs() {
             json: true
         };
 
-        return rp(options)
+        dispatch(fetchTodosRequest());
+        return rp.get(options)
             .then(response => {
                 return response;
             })
