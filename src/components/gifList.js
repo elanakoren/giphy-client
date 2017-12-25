@@ -1,49 +1,25 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as gifActions from '../actions/actions';
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {Gif} from './gif';
 
-class GifList extends Component {
+// TODO: could be functional
+export class GifList extends Component {
     static propTypes = {
-        gifActions: PropTypes.object.isRequired,
-        gifs: PropTypes.array,
+        gifData: PropTypes.array,
     };
 
-    componentWillMount() {
-        this.props.gifActions.fetchGifs();
-    }
-
-    renderGifs() {
-        const gifUrls = this.props.gifs.data.map(gif => {
-           return <span>{gif.url}</span>
-        });
-        return <div>{gifUrls}</div>;
-    }
-
     render() {
+        const {gifData} = this.props;
+        const gifs = gifData.map((gifDatum, i) => {
+            return (<Gif
+                key={i}
+                imgSrc={gifDatum.images.downsized.url}
+            />)
+        });
         return (
             <div>
-                {this.props.gifs.data && this.props.gifs.data.length > 0 ?
-                    this.renderGifs() : null}
+                {gifs}
             </div>
         );
     }
 }
-
-function mapStateToProps(state) {
-    return {
-        gifs: state.gifs
-    };
-}
-
-function mapDispatchToProps(dispatch) {
-    return {
-        gifActions: bindActionCreators(gifActions, dispatch)
-    };
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(GifList);
