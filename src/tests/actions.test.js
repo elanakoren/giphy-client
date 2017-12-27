@@ -8,6 +8,33 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('actions', () => {
+
+    describe('receiveGifs', () => {
+       it('should create an action to receive the gif response', () => {
+           const gifs = {data: ['gif1', 'gif2'], pagination: {count: 25}}
+           const expectedAction = {
+             type: types.RECEIVE_GIFS,
+               gifs
+           };
+           expect(actions.receiveGifs(gifs)).toEqual(expectedAction);
+       });
+    });
+
+    describe('fetchTodosRequest', () => {
+
+    });
+
+    describe('changeGifOrder', () => {
+        it('should create an action to change the sort order', () => {
+            const order = 'desc';
+            const expectedAction = {
+                type: types.CHANGE_GIF_ORDER,
+                order
+            };
+            expect(actions.changeGifOrder(order)).toEqual(expectedAction)
+        });
+    });
+
     describe('fetchGifs', () => {
         let promise, response;
         beforeEach(() => {
@@ -36,17 +63,6 @@ describe('actions', () => {
             return store.dispatch(actions.fetchGifs()).then(() => {
                 expect(store.getActions()).toEqual(dispatchedActions)
             });
-        });
-    });
-
-    describe('changeGifOrder', () => {
-        it('should create an action to change the sort order', () => {
-            const order = 'desc';
-            const expectedAction = {
-                type: types.CHANGE_GIF_ORDER,
-                order
-            };
-            expect(actions.changeGifOrder(order)).toEqual(expectedAction)
         });
     });
 });

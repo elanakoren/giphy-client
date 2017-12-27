@@ -8,6 +8,7 @@ export function receiveGifs(gifs) {
 export function fetchTodosRequest() {
     return {type: types.FETCH_GIFS}
 }
+
 export function changeGifOrder(order) {
     return {type: types.CHANGE_GIF_ORDER, order};
 }
