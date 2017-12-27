@@ -4,7 +4,10 @@ import * as gifActions from '../actions/actions';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {GifList} from './gifList';
-    class GifListContainer extends Component {
+import {SortBar} from './sortBar';
+import {sortByDateDescending, sortByDateAscending} from '../helpers/sortHelper';
+
+class GifListContainer extends Component {
     static propTypes = {
         gifActions: PropTypes.object.isRequired,
         gifs: PropTypes.object,
@@ -15,15 +18,25 @@ import {GifList} from './gifList';
     }
 
     render() {
-        const {gifs} = this.props;
+        const {gifs, gifActions} = this.props;
         let gifList;
 
-        if (gifs.data && gifs.data.length > 0) {
+        const gifDataAvailable = (gifs.data && gifs.data.length > 0);
+
+        if (gifDataAvailable && gifs.order === 'asc') {
+            gifs.data.sort(sortByDateAscending);
             gifList = (<GifList gifData={gifs.data}/>);
         }
 
+        else if (gifDataAvailable) {
+            gifs.data.sort(sortByDateDescending);
+            gifList = (<GifList gifData={gifs.data}/>);
+        }
+
+        const options = [{text: 'desc'}, {text: 'asc'}];
         return (
             <div>
+                <SortBar {...{options, gifActions}}/>
                 {gifList}
             </div>
         );

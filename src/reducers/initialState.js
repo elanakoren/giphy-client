@@ -1,3 +1,5 @@
 export default {
-    gifs: {},
+    gifs: {
+        order: 'desc'
+    },
 };

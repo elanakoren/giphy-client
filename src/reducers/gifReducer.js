@@ -7,7 +7,10 @@ export default function gifs(state = initialState.gifs, action) {
         case FETCH_GIFS:
             return state;
         case RECEIVE_GIFS:
-            newState = action.gifs;
+            newState = {...action.gifs, order: state.order};
+            return newState;
+        case CHANGE_GIF_ORDER:
+            newState = {...state, order: action.order};
             return newState;
         default:
             return state;
