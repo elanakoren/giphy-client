@@ -1,13 +1,22 @@
+// @flow
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import type {sortOrder} from '../types';
 
-export class SortBar extends Component {
-    static propTypes = {
-        options: PropTypes.array.isRequired,
-        gifActions: PropTypes.object.isRequired,
-    };
+type Props = {
+    gifActions: Object,
+    options: Object[],
+    label: string,
+};
 
-    constructor(props) {
+type State = {
+    sortOrder: sortOrder,
+};
+
+export class SortBar extends Component<Props, State> {
+    props: Props;
+    state: State;
+
+    constructor(props: Props) {
         super(props);
         this.state = {
             sortOrder: 'desc'
@@ -48,5 +57,3 @@ export class SortBar extends Component {
         )
     }
 }
-
-export default SortBar;

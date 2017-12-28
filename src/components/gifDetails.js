@@ -1,11 +1,13 @@
+// @flow
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 
-export default class GifDetails extends Component {
-    static propTypes = {
-        title: PropTypes.string,
-        username: PropTypes.string,
-    };
+type Props = {
+    title: ?string,
+    username: ?string
+}
+
+export default class GifDetails extends Component<Props> {
+    props: Props;
 
     render() {
         const {title, username} = this.props;

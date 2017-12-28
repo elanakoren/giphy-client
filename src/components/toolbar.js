@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import {SortBar} from './sortBar';
 import Search from './search';
-import PropTypes from 'prop-types';
 
-export default class Toolbar extends Component {
-    static propTypes = {
-        options: PropTypes.array.isRequired,
-        gifActions: PropTypes.object.isRequired,
-    };
+type Props = {
+    gifActions: Object,
+    options: Object[],
+    label: string,
+};
+
+
+export default class Toolbar extends Component<Props> {
+    props: Props;
 
     render() {
         const {options, gifActions, label} = this.props;

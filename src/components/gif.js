@@ -1,13 +1,22 @@
+// @flow
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import GifDetails from './gifDetails';
 
-export class Gif extends Component {
-    static propTypes = {
-        imgSrc: PropTypes.string.isRequired,
-    };
+type Props = {
+    imgSrc: string,
+    title: ?string,
+    username: ?string
+};
 
-    constructor(props, context) {
+type State = {
+  expanded: boolean
+};
+
+export class Gif extends Component<Props, State> {
+    props: Props;
+    state: State;
+
+    constructor(props: Props) {
         super();
         this.state = {expanded: false};
     }

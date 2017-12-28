@@ -1,9 +1,16 @@
+// @flow
 import React, {Component} from 'react';
 
-export default class Search extends Component {
-    constructor(props, context) {
-        super(props, context);
-        this.searchQuery = '';
+type Props = {
+    gifActions: Object
+}
+
+export default class Search extends Component<Props> {
+    searchQuery: ?HTMLInputElement | null;
+
+    constructor(props: Props) {
+        super(props);
+        this.searchQuery = null;
     }
 
     render() {
@@ -15,7 +22,7 @@ export default class Search extends Component {
                     ref={(input) => {
                         this.searchQuery = input
                     }}/>
-                <button onClick={() => gifActions.fetchGifs(this.searchQuery.value)}>
+                <button onClick={() => gifActions.fetchGifs(this.searchQuery)}>
                     Search
                 </button>
             </div>

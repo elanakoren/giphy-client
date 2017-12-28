@@ -1,12 +1,13 @@
+// @flow
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {Gif} from './gif';
 
-export class GifList extends Component {
-    static propTypes = {
-        gifData: PropTypes.array,
-    };
+// todo: make this a custom type?
+type Props = {
+    gifData: Object
+};
 
+export class GifList extends Component<Props> {
     render() {
         const {gifData} = this.props;
         const gifs = gifData.map((gifDatum, i) => {

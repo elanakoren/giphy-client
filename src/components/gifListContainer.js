@@ -1,18 +1,18 @@
+//@flow
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as gifActions from '../actions/actions';
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {GifList} from './gifList';
 import Toolbar from './toolbar';
 import {sortByDateDescending, sortByDateAscending} from '../helpers/sortHelper';
 
-class GifListContainer extends Component {
-    static propTypes = {
-        gifActions: PropTypes.object.isRequired,
-        gifs: PropTypes.object,
-    };
+type Props = {
+    gifActions: Object,
+    gifs: Object
+};
 
+class GifListContainer extends Component<Props> {
     componentWillMount() {
         this.props.gifActions.fetchGifs()
     }
