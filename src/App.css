@@ -8,11 +8,16 @@
 .gif {
     height: 150px;
     width: 200px;
-    margin: 10px 10px 50px 10px;
+    margin: 10px 10px 10px 10px;
 }
 
 .grid-cell {
     flex: none;
+}
+
+.grid-cell .gif-details {
+    margin: 0 10px;
+    width: 200px;
 }
 
 .sort-control {

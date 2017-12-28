@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Gif} from './gif';
 
-// TODO: could be functional
 export class GifList extends Component {
     static propTypes = {
         gifData: PropTypes.array,
@@ -14,6 +13,8 @@ export class GifList extends Component {
             return (<Gif
                 key={i}
                 imgSrc={gifDatum.images.fixed_width.url}
+                title={gifDatum.title}
+                username={gifDatum.username}
             />)
         });
         return (
