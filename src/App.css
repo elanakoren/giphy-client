@@ -1,28 +1,20 @@
-.grid {
-  display: flex;
-  width: 1080px;
-  flex-wrap: wrap;
-}
-
-.grid-cell {
-  flex: 1;
-}
-
-.select-row {
-  display: flex;
-  width: 1080px;
-}
-
-.select-box {
-  margin: 10px;
-  margin-left: auto;
-}
-
-.select-label {
-  margin-right: 5px;
+.grid, .toolbar-grid {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .gif {
-  height: 150px;
-  width: 200px;
+    height: 150px;
+    width: 200px;
+    margin: 10px 10px 50px 10px;
+}
+
+.grid-cell {
+    flex: none;
+}
+
+.sort-control {
+    margin-left: 20px;
 }

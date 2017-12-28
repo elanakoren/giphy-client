@@ -12,7 +12,7 @@ export default class Toolbar extends Component {
     render() {
         const {options, gifActions, label} = this.props;
         return (
-            <div className="toolbar-row">
+            <div className="toolbar-grid">
                 <Search {...{gifActions}}/>
                 <SortBar {...{options, gifActions, label}}/>
             </div>

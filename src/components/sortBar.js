@@ -32,18 +32,18 @@ export class SortBar extends Component {
         });
 
         return (
-            <div className="select-row">
-                <div className="select-box">
-                    {label && <label htmlFor="select-sort">
-                        {label}
-                    </label>}
-                    <select
-                        onChange={() => this.changeSortOrder()}
-                        label={label}>
-                        {optionElements}
-                        id="select-sort"
-                    </select>
-                </div>
+            <div className="sort-control">
+                {label && <label
+                    htmlFor="select-sort"
+                    className="select-label">
+                    {label}
+                </label>}
+                <select
+                    onChange={() => this.changeSortOrder()}
+                    label={label}>
+                    {optionElements}
+                    id="select-sort"
+                </select>
             </div>
         )
     }

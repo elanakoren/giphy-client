@@ -9,14 +9,16 @@ export default class Search extends Component {
     render() {
         const {gifActions} = this.props;
         return (
-            <span>
+            <div>
                 <input
                     type="text"
-                    ref={(input) => {this.searchQuery = input}}/>
+                    ref={(input) => {
+                        this.searchQuery = input
+                    }}/>
                 <button onClick={() => gifActions.fetchGifs(this.searchQuery.value)}>
                     Search
                 </button>
-        </span>
+            </div>
         )
     }
 }
