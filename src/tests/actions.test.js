@@ -4,9 +4,10 @@ import thunk from 'redux-thunk';
 import * as actions from '../actions/actions';
 import * as types from '../actions/actionTypes';
 import rp from 'request-promise';
+import mockStore from 'flow-typed'
 
 const middlewares = [thunk];
-const mockStore: any = configureMockStore(middlewares);
+const mockReduxStore: mockStore = configureMockStore(middlewares);
 
 describe('actions', () => {
     describe('receiveGifs', () => {
@@ -58,7 +59,7 @@ describe('actions', () => {
                 {type: types.RECEIVE_GIFS, gifs: response}
             ];
 
-            const store = mockStore({gifs: []});
+            const store = mockReduxStore({gifs: []});
 
             return store.dispatch(actions.fetchGifs()).then(() => {
                 expect(store.getActions()).toEqual(dispatchedActions)
