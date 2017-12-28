@@ -1,4 +1,5 @@
-export function sortByDateDescending(firstGifDatum, secondGifDatum) {
+// @flow
+export function sortByDateDescending(firstGifDatum: Object, secondGifDatum: Object) {
     let firstGifDate = new Date(firstGifDatum.import_datetime);
     let secondGifDate = new Date(secondGifDatum.import_datetime);
 
@@ -13,7 +14,7 @@ export function sortByDateDescending(firstGifDatum, secondGifDatum) {
     return 0;
 }
 
-export function sortByDateAscending(firstGifDatum, secondGifDatum) {
+export function sortByDateAscending(firstGifDatum: Object, secondGifDatum: Object) {
     let firstGifDate = new Date(firstGifDatum.import_datetime);
     let secondGifDate = new Date(secondGifDatum.import_datetime);
 

@@ -1,7 +1,8 @@
+// @flow
 import initialState from './initialState';
 import {FETCH_GIFS, RECEIVE_GIFS, CHANGE_GIF_ORDER} from '../actions/actionTypes';
 
-export default function gifs(state = initialState.gifs, action) {
+export default function gifs(state: Object = initialState.gifs, action: Object) {
     let newState;
 
     switch (action.type) {
