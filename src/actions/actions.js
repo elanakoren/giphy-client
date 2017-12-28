@@ -12,12 +12,18 @@ export function fetchTodosRequest() {
 export function changeGifOrder(order) {
     return {type: types.CHANGE_GIF_ORDER, order};
 }
-export function fetchGifs() {
+
+export function fetchGifs(q) {
+    const searchUri = 'https://api.giphy.com/v1/gifs/search';
+    const trendingUri = 'https://api.giphy.com/v1/gifs/trending';
+    let uri = q ? searchUri : trendingUri;
+
     return dispatch => {
         const options = {
-            uri: 'https://api.giphy.com/v1/gifs/trending',
+            uri,
             qs: {
                 api_key: process.env.REACT_APP_API_KEY,
+                q
             },
             limit: 20,
             method: 'GET',

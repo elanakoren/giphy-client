@@ -4,7 +4,7 @@ import * as gifActions from '../actions/actions';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {GifList} from './gifList';
-import {SortBar} from './sortBar';
+import Toolbar from './toolbar';
 import {sortByDateDescending, sortByDateAscending} from '../helpers/sortHelper';
 
 class GifListContainer extends Component {
@@ -36,7 +36,7 @@ class GifListContainer extends Component {
         const options = [{text: 'desc'}, {text: 'asc'}];
         return (
             <div>
-                <SortBar {...{options, gifActions, label: 'Sort by:'}}/>
+                <Toolbar {...{options, gifActions, label: 'Sort by:'}}/>
                 {gifList}
             </div>
         );
