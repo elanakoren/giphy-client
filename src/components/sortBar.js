@@ -25,18 +25,26 @@ export class SortBar extends Component {
     }
 
     render() {
-        const {options} = this.props;
+        const {options, label} = this.props;
 
         const optionElements = options.map((option, key) => {
             return <option{...{key}}>{option.text}</option>
         });
 
         return (
-            <select
-                className="select-box"
-                onChange={() => this.changeSortOrder()}>
-                {optionElements}
-            </select>
+            <div className="select-row">
+                <div className="select-box">
+                    {label && <label htmlFor="select-sort">
+                        {label}
+                    </label>}
+                    <select
+                        onChange={() => this.changeSortOrder()}
+                        label={label}>
+                        {optionElements}
+                        id="select-sort"
+                    </select>
+                </div>
+            </div>
         )
     }
 }

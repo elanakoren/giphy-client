@@ -36,7 +36,7 @@ class GifListContainer extends Component {
         const options = [{text: 'desc'}, {text: 'asc'}];
         return (
             <div>
-                <SortBar {...{options, gifActions}}/>
+                <SortBar {...{options, gifActions, label: 'Sort by:'}}/>
                 {gifList}
             </div>
         );

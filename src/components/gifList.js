@@ -13,11 +13,11 @@ export class GifList extends Component {
         const gifs = gifData.map((gifDatum, i) => {
             return (<Gif
                 key={i}
-                imgSrc={gifDatum.images.downsized.url}
+                imgSrc={gifDatum.images.fixed_width.url}
             />)
         });
         return (
-            <div>
+            <div className="grid">
                 {gifs}
             </div>
         );

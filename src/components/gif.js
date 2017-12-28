@@ -9,7 +9,7 @@ export class Gif extends Component {
     render() {
         const {imgSrc} = this.props;
         return (
-            <div className="col">
+            <div className="grid-cell">
                 <img className="gif" src={imgSrc}/>
             </div>);
     }
