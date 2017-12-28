@@ -1,3 +1,4 @@
+// @flow
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import * as actions from '../actions/actions';
@@ -5,10 +6,9 @@ import * as types from '../actions/actionTypes';
 import rp from 'request-promise';
 
 const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
+const mockStore: any = configureMockStore(middlewares);
 
 describe('actions', () => {
-
     describe('receiveGifs', () => {
        it('should create an action to receive the gif response', () => {
            const gifs = {data: ['gif1', 'gif2'], pagination: {count: 25}}

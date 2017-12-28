@@ -1,5 +1,4 @@
 // @flow
-
 import React, {Component} from 'react';
 import './App.css';
 import GifListContainer from './components/gifListContainer';

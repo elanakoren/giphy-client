@@ -15,7 +15,7 @@ export function changeGifOrder(order: sortOrder) {
     return {type: types.CHANGE_GIF_ORDER, order};
 }
 
-export function fetchGifs(q: HTMLInputElement) {
+export function fetchGifs(q: ?HTMLInputElement) {
     const searchUri = 'https://api.giphy.com/v1/gifs/search';
     const trendingUri = 'https://api.giphy.com/v1/gifs/trending';
     let uri = q ? searchUri : trendingUri;

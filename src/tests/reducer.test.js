@@ -1,3 +1,4 @@
+// @flow
 import gifReducer from '../reducers/gifReducer';
 import * as actionTypes from '../actions/actionTypes';
 
