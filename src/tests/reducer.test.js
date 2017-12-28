@@ -18,8 +18,8 @@ describe('gifReducer', () => {
             action = {type: actionTypes.FETCH_GIFS}
         });
 
-        it('returns the state', () => {
-            expect(gifReducer(state, action)).toEqual(state);
+        it('removes the old gifs from the state', () => {
+            expect(gifReducer(state, action)).toEqual({order: 'desc'});
         });
     });
 

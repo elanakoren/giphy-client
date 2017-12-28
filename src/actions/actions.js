@@ -5,7 +5,7 @@ export function receiveGifs(gifs) {
     return {type: types.RECEIVE_GIFS, gifs};
 }
 
-export function fetchTodosRequest() {
+export function fetchGifRequest() {
     return {type: types.FETCH_GIFS}
 }
 
@@ -23,14 +23,14 @@ export function fetchGifs(q) {
             uri,
             qs: {
                 api_key: process.env.REACT_APP_API_KEY,
-                q
+                q,
+                limit: 25,
             },
-            limit: 20,
             method: 'GET',
             json: true
         };
 
-        dispatch(fetchTodosRequest());
+        dispatch(fetchGifRequest());
         return rp.get(options)
             .then(response => {
                 return response;
