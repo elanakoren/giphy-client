@@ -1,7 +1,9 @@
 // @flow
+import moment from 'moment';
+
 export function sortByDateDescending(firstGifDatum: Object, secondGifDatum: Object) {
-    let firstGifDate = new Date(firstGifDatum.import_datetime);
-    let secondGifDate = new Date(secondGifDatum.import_datetime);
+    let firstGifDate = moment(firstGifDatum.import_datetime).format();
+    let secondGifDate = moment(secondGifDatum.import_datetime).format();
 
     if (firstGifDate > secondGifDate) {
         return -1;
@@ -15,8 +17,8 @@ export function sortByDateDescending(firstGifDatum: Object, secondGifDatum: Obje
 }
 
 export function sortByDateAscending(firstGifDatum: Object, secondGifDatum: Object) {
-    let firstGifDate = new Date(firstGifDatum.import_datetime);
-    let secondGifDate = new Date(secondGifDatum.import_datetime);
+    let firstGifDate = moment(firstGifDatum.import_datetime).format();
+    let secondGifDate = moment(secondGifDatum.import_datetime).format();
 
     if (firstGifDate < secondGifDate) {
         return -1;
