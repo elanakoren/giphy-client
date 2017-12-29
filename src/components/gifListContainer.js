@@ -5,10 +5,11 @@ import * as gifActions from '../actions/actions';
 import React, {Component} from 'react';
 import {GifList} from './gifList';
 import Toolbar from './toolbar';
+import type {gifData} from '../types';
 
 type Props = {
     gifActions: Object,
-    gifs: Object
+    gifs: gifData
 };
 
 class GifListContainer extends Component<Props> {

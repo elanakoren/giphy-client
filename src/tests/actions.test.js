@@ -5,6 +5,7 @@ import * as actions from '../actions/actions';
 import * as types from '../actions/actionTypes';
 import rp from 'request-promise';
 import mockStore from 'flow-typed'
+import {gifFixture} from './fixtures/gifFixture';
 
 const middlewares = [thunk];
 const mockReduxStore: mockStore = configureMockStore(middlewares);
@@ -12,12 +13,11 @@ const mockReduxStore: mockStore = configureMockStore(middlewares);
 describe('actions', () => {
     describe('receiveGifs', () => {
        it('should create an action to receive the gif response', () => {
-           const gifs = {data: ['gif1', 'gif2'], pagination: {count: 25}}
            const expectedAction = {
              type: types.RECEIVE_GIFS,
-               gifs
+               gifFixture
            };
-           expect(actions.receiveGifs(gifs)).toEqual(expectedAction);
+           expect(actions.receiveGifs(gifFixture)).toEqual(expectedAction);
        });
     });
 
@@ -56,7 +56,8 @@ describe('actions', () => {
 
             const dispatchedActions = [
                 {type: types.FETCH_GIFS},
-                {type: types.RECEIVE_GIFS, gifs: response}
+                {type: types.RECEIVE_GIFS, gifs: response},
+                {type: types.CHANGE_GIF_ORDER, order: 'desc'}
             ];
 
             const store = mockReduxStore({gifs: []});

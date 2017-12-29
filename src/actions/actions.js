@@ -1,9 +1,9 @@
 // @flow
 import * as types from './actionTypes';
 import rp from 'request-promise';
-import type {sortOrder} from '../types';
+import type {sortOrder, gifData} from '../types';
 
-export function receiveGifs(gifs: Object) {
+export function receiveGifs(gifs: gifData) {
     return {type: types.RECEIVE_GIFS, gifs};
 }
 
