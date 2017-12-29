@@ -49,9 +49,10 @@ export class SortBar extends Component<Props, State> {
                 </label>}
                 <select
                     onChange={() => this.changeSortOrder()}
-                    label={label}>
-                    {optionElements}
+                    label={label}
                     id="select-sort"
+                    className="sort-dropdown">
+                    {optionElements}
                 </select>
             </div>
         )

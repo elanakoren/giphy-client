@@ -29,7 +29,7 @@ class GifListContainer extends Component<Props> {
         const options = [{text: 'desc'}, {text: 'asc'}];
         return (
             <div>
-                <Toolbar {...{options, gifActions, label: 'Sort by:'}}/>
+                <Toolbar {...{options, gifActions, label: 'Sort by upload time:'}}/>
                 {gifList}
             </div>
         );

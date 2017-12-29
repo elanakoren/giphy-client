@@ -32,7 +32,11 @@ export class Gif extends Component<Props, State> {
         let showGifDetails = expanded ? 'show-details' : 'hide-details';
         return (
             <div className="grid-cell">
-                <img className="gif" src={imgSrc} onClick={() => this.onGifClick()}/>
+                <img
+                    alt=""
+                    className="gif"
+                    src={imgSrc}
+                    onClick={() => this.onGifClick()}/>
                 <GifDetails {...{title, username, showGifDetails}}/>
             </div>);
     }
