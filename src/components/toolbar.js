@@ -1,3 +1,4 @@
+// @flow
 import React, {Component} from 'react';
 import {SortBar} from './sortBar';
 import Search from './search';
