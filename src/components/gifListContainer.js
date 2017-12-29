@@ -5,7 +5,6 @@ import * as gifActions from '../actions/actions';
 import React, {Component} from 'react';
 import {GifList} from './gifList';
 import Toolbar from './toolbar';
-import {sortByDateDescending, sortByDateAscending} from '../helpers/sortHelper';
 
 type Props = {
     gifActions: Object,
@@ -23,13 +22,7 @@ class GifListContainer extends Component<Props> {
 
         const gifDataAvailable = (gifs.data && gifs.data.length > 0);
 
-        if (gifDataAvailable && gifs.order === 'asc') {
-            gifs.data.sort(sortByDateAscending);
-            gifList = (<GifList gifData={gifs.data}/>);
-        }
-
-        else if (gifDataAvailable) {
-            gifs.data.sort(sortByDateDescending);
+        if (gifDataAvailable) {
             gifList = (<GifList gifData={gifs.data}/>);
         }
 
