@@ -34,11 +34,12 @@ export class Gif extends Component<Props, State> {
         const {imgSrc, title, username} = this.props;
         const {expanded} = this.state;
         let showGifDetails = expanded ? 'show-details' : 'hide-details';
+        let expandGif = expanded ? 'expanded' : '';
         return (
             <div className="grid-cell">
                 <img
                     alt=""
-                    className="gif"
+                    className={`gif ${expandGif}`}
                     src={imgSrc}
                     onClick={() => this.onGifClick()}/>
                 <GifDetails {...{title, username, showGifDetails}}/>

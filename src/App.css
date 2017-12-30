@@ -15,6 +15,11 @@
     flex: none;
 }
 
+.expanded {
+    height: 200px;
+    width: 300px;
+}
+
 .grid-cell .gif-details {
     margin: 0 10px;
     width: 200px;
