@@ -43,6 +43,14 @@
     height: 20px;
     font-size: 12px;
 }
+
+.gif-detail-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+}
+
 .toolbar-grid {
     line-height: 25px;
     height: 25px;

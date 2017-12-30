@@ -13,8 +13,8 @@ export default class GifDetails extends Component<Props> {
     render() {
         const {title, username, showGifDetails} = this.props;
         return <div className={`${showGifDetails} gif-details`}>
-            {title && <div> title: {title} </div>}
-            {username && <div> author: {username} </div>}
+            {title && <div className="gif-detail-text"> title: {title} </div>}
+            {username && <div className="gif-detail-text"> author: {username} </div>}
             {!title && !username && <div>
                 No details available
             </div>}
