@@ -26,6 +26,10 @@ export class Gif extends Component<Props, State> {
         this.setState({expanded: !expanded});
     }
 
+    componentWillReceiveProps() {
+        this.setState({expanded: false})
+    }
+
     render() {
         const {imgSrc, title, username} = this.props;
         const {expanded} = this.state;
