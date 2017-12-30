@@ -13,6 +13,15 @@ export default class Search extends Component<Props> {
         this.searchQuery = null;
     }
 
+    clearSearch() {
+        const {gifActions} = this.props;
+        if (this.searchQuery instanceof HTMLInputElement) {
+            this.searchQuery.value = '';
+        }
+        gifActions.fetchGifs();
+
+    }
+
     render() {
         const {gifActions} = this.props;
         return (
@@ -26,6 +35,11 @@ export default class Search extends Component<Props> {
                     className="search-button"
                     onClick={() => gifActions.fetchGifs(this.searchQuery)}>
                     Search
+                </button>
+                <button
+                    className="search-button"
+                    onClick={() => this.clearSearch()}>
+                    Clear Search
                 </button>
             </div>
         )
