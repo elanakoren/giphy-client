@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gifDetails component when hiding gif details renders correctly 1`] = `
+<div
+  className="hide-details gif-details"
+>
+  <div
+    className="gif-detail-text"
+  >
+     title: 
+    some-title
+     
+  </div>
+  <div
+    className="gif-detail-text"
+  >
+     author: 
+    some-username
+     
+  </div>
+</div>
+`;
+
+exports[`gifDetails component when showing gif details renders correctly 1`] = `
+<div
+  className="show-details gif-details"
+>
+  <div
+    className="gif-detail-text"
+  >
+     title: 
+    some-title
+     
+  </div>
+  <div
+    className="gif-detail-text"
+  >
+     author: 
+    some-username
+     
+  </div>
+</div>
+`;
