@@ -32,12 +32,12 @@ export default class Search extends Component<Props> {
                         this.searchQuery = input
                     }}/>
                 <button
-                    className="search-button"
+                    className="search-button submit-button"
                     onClick={() => gifActions.fetchGifs(this.searchQuery)}>
                     Search
                 </button>
                 <button
-                    className="search-button"
+                    className="search-button clear-button"
                     onClick={() => this.clearSearch()}>
                     Clear Search
                 </button>

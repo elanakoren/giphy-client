@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search the snapshot matches the snapshot 1`] = `
+<div
+  className="search-control"
+>
+  <input
+    type="text"
+  />
+  <button
+    className="search-button submit-button"
+    onClick={[Function]}
+  >
+    Search
+  </button>
+  <button
+    className="search-button clear-button"
+    onClick={[Function]}
+  >
+    Clear Search
+  </button>
+</div>
+`;
