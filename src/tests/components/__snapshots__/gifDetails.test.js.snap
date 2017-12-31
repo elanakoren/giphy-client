@@ -18,6 +18,12 @@ exports[`gifDetails component when hiding gif details renders correctly 1`] = `
     some-username
      
   </div>
+  <div
+    className="gif-detail-text date"
+  >
+    uploaded: 
+    Jan 1st 1970
+  </div>
 </div>
 `;
 
@@ -38,6 +44,12 @@ exports[`gifDetails component when showing gif details renders correctly 1`] = `
      author: 
     some-username
      
+  </div>
+  <div
+    className="gif-detail-text date"
+  >
+    uploaded: 
+    Jan 1st 1970
   </div>
 </div>
 `;

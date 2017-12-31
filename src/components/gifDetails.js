@@ -17,7 +17,7 @@ export default class GifDetails extends Component<Props> {
         return <div className={`${showGifDetails} gif-details`}>
             {title && <div className="gif-detail-text"> title: {title} </div>}
             {username && <div className="gif-detail-text"> author: {username} </div>}
-            {import_datetime && <div className="gif-detail-text"> uploded: {moment(import_datetime).format("MMM Do YYYY")} </div>}
+            {import_datetime && <div className="gif-detail-text date">uploaded: {moment(import_datetime).format("MMM Do YYYY")}</div>}
             {!title && !username && <div>
                 No details available
             </div>}
