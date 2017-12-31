@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import GifDetails from '../../components/gifDetails';
 import {shallow} from 'enzyme';
