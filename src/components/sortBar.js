@@ -4,8 +4,6 @@ import type {sortOrder} from '../types';
 
 type Props = {
     gifActions: Object,
-    options: Object[],
-    label: string,
 };
 
 type State = {
@@ -34,25 +32,19 @@ export class SortBar extends Component<Props, State> {
     }
 
     render() {
-        const {options, label} = this.props;
-
-        const optionElements = options.map((option, key) => {
-            return <option{...{key}}>{option.text}</option>
-        });
-
         return (
             <div className="sort-control">
-                {label && <label
+                <label
                     htmlFor="select-sort"
                     className="select-label">
-                    {label}
-                </label>}
+                    Sort by upload time:
+                </label>
                 <select
                     onChange={() => this.changeSortOrder()}
-                    label={label}
                     id="select-sort"
                     className="sort-dropdown">
-                    {optionElements}
+                    <option>Newest first</option>
+                    <option>Oldest first</option>
                 </select>
             </div>
         )
