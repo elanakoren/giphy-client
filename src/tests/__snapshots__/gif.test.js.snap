@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gif component renders correctly 1`] = `
+<div
+  className="grid-cell"
+>
+  <img
+    alt=""
+    className="gif "
+    onClick={[Function]}
+    src="some-giphy-url"
+  />
+  <GifDetails
+    showGifDetails="hide-details"
+    title="whoa cool gif"
+    username="the best user"
+  />
+</div>
+`;
