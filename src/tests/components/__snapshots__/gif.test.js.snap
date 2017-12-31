@@ -11,6 +11,7 @@ exports[`gif component renders correctly 1`] = `
     src="some-giphy-url"
   />
   <GifDetails
+    import_datetime="1970-01-01 00:00:00"
     showGifDetails="hide-details"
     title="whoa cool gif"
     username="the best user"

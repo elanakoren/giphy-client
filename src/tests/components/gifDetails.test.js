@@ -9,7 +9,8 @@ describe('gifDetails component', () => {
             const wrapper = shallow(<GifDetails {...{
                 title: 'some-title',
                 username: 'some-username',
-                showGifDetails: 'show-details'
+                showGifDetails: 'show-details',
+                import_datetime: '1970-01-01 00:00:00'
             }}/>);
             expect(wrapper).toMatchSnapshot();
         });
@@ -20,7 +21,8 @@ describe('gifDetails component', () => {
             const wrapper = shallow(<GifDetails {...{
                 title: 'some-title',
                 username: 'some-username',
-                showGifDetails: 'hide-details'
+                showGifDetails: 'hide-details',
+                import_datetime: '1970-01-01 00:00:00'
             }}/>);
             expect(wrapper).toMatchSnapshot();
         });

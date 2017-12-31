@@ -8,7 +8,8 @@ describe('gif component', () => {
         const wrapper = shallow(<Gif {...{
             imgSrc: 'some-giphy-url',
             title: 'whoa cool gif',
-            username: 'the best user'
+            username: 'the best user',
+            import_datetime: '1970-01-01 00:00:00'
         }}/>);
         expect(wrapper).toMatchSnapshot();
     });
@@ -19,7 +20,8 @@ describe('gif component', () => {
             wrapper = mount(<Gif {...{
                 imgSrc: 'some-giphy-url',
                 title: 'whoa cool gif',
-                username: 'the best user'
+                username: 'the best user',
+                import_datetime: '1970-01-01 00:00:00'
             }}/>);
         });
 
@@ -55,7 +57,8 @@ describe('gif component', () => {
             wrapper = mount(<Gif {...{
                 imgSrc: 'some-giphy-url',
                 title: 'whoa cool gif',
-                username: 'the best user'
+                username: 'the best user',
+                import_datetime: '1970-01-01 00:00:00'
             }}/>);
             wrapper.find('.gif').simulate('click');
             wrapper.setProps({title: 'new-title'});

@@ -15,12 +15,11 @@ export default function gifs(state: Object = initialState.gifs, action: Object) 
             return newState;
         case CHANGE_GIF_ORDER:
             let copiedGifArray, sortedGifs;
+            copiedGifArray = state.data.slice(0);
             if (action.order === 'asc') {
-                copiedGifArray = state.data.slice(0);
                 sortedGifs = copiedGifArray.sort(sortByDateAscending);
             }
             else {
-                copiedGifArray = state.data.slice(0);
                 sortedGifs = copiedGifArray.sort(sortByDateDescending);
             }
             newState = {...state, order: action.order, data: sortedGifs};
