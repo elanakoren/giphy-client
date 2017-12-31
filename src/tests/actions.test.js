@@ -12,7 +12,7 @@ const mockReduxStore: mockStore = configureMockStore(middlewares);
 
 describe('actions', () => {
     describe('receiveGifs', () => {
-       it('should create an action to receive the gif response', () => {
+       it('should create the appropriate action', () => {
            const expectedAction = {
              type: types.RECEIVE_GIFS,
                gifFixture
@@ -21,12 +21,17 @@ describe('actions', () => {
        });
     });
 
-    describe('fetchTodosRequest', () => {
-
+    describe('fetchGifRequest', () => {
+        it('should create the appropriate action', () => {
+            const expectedAction = {
+                type: types.FETCH_GIFS
+            };
+            expect(actions.fetchGifRequest()).toEqual(expectedAction);
+        })
     });
 
     describe('changeGifOrder', () => {
-        it('should create an action to change the sort order', () => {
+        it('should create the appropriate action', () => {
             const order = 'desc';
             const expectedAction = {
                 type: types.CHANGE_GIF_ORDER,

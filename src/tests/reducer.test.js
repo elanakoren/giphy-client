@@ -9,7 +9,7 @@ describe('gifReducer', () => {
         });
     });
 
-    describe('when fetch gifs is dispatched', () => {
+    describe('when fetch gif request is dispatched', () => {
         let state, action;
         beforeEach(() => {
             state = {
