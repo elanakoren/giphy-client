@@ -41,6 +41,5 @@ export function fetchGifs(q: ?HTMLInputElement) {
                 console.log(error);
             })
             .then(gifs => dispatch(receiveGifs(gifs)))
-            .then(gifs => dispatch(changeGifOrder('desc')));
     };
 }

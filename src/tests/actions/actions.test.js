@@ -62,7 +62,6 @@ describe('actions', () => {
             const dispatchedActions = [
                 {type: types.FETCH_GIFS},
                 {type: types.RECEIVE_GIFS, gifs: response},
-                {type: types.CHANGE_GIF_ORDER, order: 'desc'}
             ];
 
             const store = mockReduxStore({gifs: []});
