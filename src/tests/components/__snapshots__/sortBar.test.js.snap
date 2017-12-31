@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sortbar component renders correctly 1`] = `
+<div
+  className="sort-control"
+>
+  <label
+    className="select-label"
+    htmlFor="select-sort"
+  >
+    Sort by upload time:
+  </label>
+  <select
+    className="sort-dropdown"
+    id="select-sort"
+    onChange={[Function]}
+  >
+    <option>
+      Newest first
+    </option>
+    <option>
+      Oldest first
+    </option>
+  </select>
+</div>
+`;
