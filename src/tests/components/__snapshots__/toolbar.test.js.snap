@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gifList renders correctly 1`] = `
+<div
+  className="toolbar-grid"
+>
+  <Search
+    gifActions={
+      Object {
+        "firstFn": [Function],
+      }
+    }
+  />
+  <SortBar
+    gifActions={
+      Object {
+        "firstFn": [Function],
+      }
+    }
+  />
+</div>
+`;
