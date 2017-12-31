@@ -1,11 +1,11 @@
 // @flow
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import * as actions from '../actions/actions';
-import * as types from '../actions/actionTypes';
+import * as actions from '../../actions/actions';
+import * as types from '../../actions/actionTypes';
 import rp from 'request-promise';
 import mockStore from 'flow-typed'
-import {gifFixture} from './fixtures/gifFixture';
+import {gifFixture} from '../fixtures/gifFixture';
 
 const middlewares = [thunk];
 const mockReduxStore: mockStore = configureMockStore(middlewares);

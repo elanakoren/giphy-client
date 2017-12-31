@@ -1,6 +1,6 @@
 // @flow
-import gifReducer from '../reducers/gifReducer';
-import * as actionTypes from '../actions/actionTypes';
+import gifReducer from '../../reducers/gifReducer';
+import * as actionTypes from '../../actions/actionTypes';
 
 describe('gifReducer', () => {
     it('defaults to the initial state', () => {

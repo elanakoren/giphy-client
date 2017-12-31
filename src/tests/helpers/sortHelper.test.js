@@ -1,6 +1,6 @@
 //@flow
-import {gifs} from './fixtures/gifFixture';
-import {sortByDateAscending, sortByDateDescending} from '../helpers/sortHelper'
+import {gifs} from '../fixtures/gifFixture';
+import {sortByDateAscending, sortByDateDescending} from '../../helpers/sortHelper'
 
 describe('sortHelper', () => {
     describe('sortByDateDescending', () => {
