@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {Gif} from './gif';
 import type {gifDatum} from '../types';
 
-// todo: make this a custom type?
 type Props = {
     gifData: gifDatum[]
 };
