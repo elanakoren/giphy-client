@@ -4,9 +4,9 @@ import GifDetails from './gifDetails';
 
 type Props = {
     imgSrc: string,
-    title: ?string,
-    username: ?string,
-    import_datetime: ?string,
+    title: string,
+    username: string,
+    import_datetime: string,
 };
 
 type State = {

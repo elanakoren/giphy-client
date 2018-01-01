@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 import moment from 'moment';
 
 type Props = {
-    title: ?string,
-    username: ?string,
-    import_datetime: ?string,
+    title: string,
+    username: string,
+    import_datetime: string,
     showGifDetails: 'show-details' | 'hide-details',
 }
 

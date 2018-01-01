@@ -66,5 +66,6 @@ export const gifs: gifData = {
             username: 'abc'
         },
     ],
-    pagination: {count: 25}, meta: {key: 'val'}
+    pagination: {count: 25}, meta: {key: 'val'},
+    order: 'desc'
 };

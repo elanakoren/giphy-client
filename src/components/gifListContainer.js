@@ -13,7 +13,7 @@ type Props = {
     gifs: gifData
 };
 
-class GifListContainer extends Component<Props> {
+export class GifListContainer extends Component<Props> {
     componentWillMount() {
         this.props.gifActions.fetchGifs()
     }

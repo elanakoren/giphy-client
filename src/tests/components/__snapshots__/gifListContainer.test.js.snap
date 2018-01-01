@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gifListContainer the unconnected component matches the snapshot 1`] = `
+<div>
+  <Toolbar
+    gifActions={
+      Object {
+        "fetchGifs": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+        },
+      }
+    }
+  />
+  <GifList
+    gifData={
+      Array [
+        Object {
+          "bitly_gif_url": "abc",
+          "bitly_url": "abc",
+          "content_url": "abc",
+          "embed_url": "abc",
+          "id": "abc",
+          "images": Object {
+            "fixed_width": Object {
+              "url": "some_url",
+            },
+          },
+          "import_datetime": "2017-12-28 23:00:01",
+          "is_indexable": 0,
+          "is_sticker": 1,
+          "rating": "abc",
+          "slug": "abc",
+          "source": "abc",
+          "source_post_url": "abc",
+          "source_tld": "abc",
+          "title": "newest",
+          "trending_datetime": "abc",
+          "type": "abc",
+          "url": "abc",
+          "username": "abc",
+        },
+        Object {
+          "bitly_gif_url": "abc",
+          "bitly_url": "abc",
+          "content_url": "abc",
+          "embed_url": "abc",
+          "id": "abc",
+          "images": Object {
+            "fixed_width": Object {
+              "url": "some_second_url",
+            },
+          },
+          "import_datetime": "1970-01-01 00:00:00",
+          "is_indexable": 0,
+          "is_sticker": 1,
+          "rating": "abc",
+          "slug": "abc",
+          "source": "abc",
+          "source_post_url": "abc",
+          "source_tld": "abc",
+          "title": "oldest",
+          "trending_datetime": "abc",
+          "type": "abc",
+          "url": "abc",
+          "username": "abc",
+        },
+        Object {
+          "bitly_gif_url": "abc",
+          "bitly_url": "abc",
+          "content_url": "abc",
+          "embed_url": "abc",
+          "id": "abc",
+          "images": Object {
+            "fixed_width": Object {
+              "url": "some_third_url",
+            },
+          },
+          "import_datetime": "2013-07-29 23:51:22",
+          "is_indexable": 0,
+          "is_sticker": 1,
+          "rating": "abc",
+          "slug": "abc",
+          "source": "abc",
+          "source_post_url": "abc",
+          "source_tld": "abc",
+          "title": "middle",
+          "trending_datetime": "abc",
+          "type": "abc",
+          "url": "abc",
+          "username": "abc",
+        },
+      ]
+    }
+  />
+</div>
+`;
