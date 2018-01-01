@@ -1,7 +1,6 @@
 // @flow
 import initialState from './initialState';
 import {FETCH_GIFS, RECEIVE_GIFS, CHANGE_GIF_ORDER} from '../actions/actionTypes';
-import {sortByDateDescending, sortByDateAscending} from '../helpers/sortHelper';
 
 export default function gifs(state: Object = initialState.gifs, action: Object) {
     let newState;

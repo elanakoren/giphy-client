@@ -10,7 +10,7 @@ type Props = {
 };
 
 type State = {
-  expanded: boolean
+    expanded: boolean
 };
 
 export class Gif extends Component<Props, State> {
@@ -27,6 +27,8 @@ export class Gif extends Component<Props, State> {
         this.setState({expanded: !expanded});
     }
 
+    // I want every GIF to go back to its unexpanded state if a sort or a search
+    // occurs.
     componentWillReceiveProps() {
         this.setState({expanded: false})
     }

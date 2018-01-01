@@ -13,7 +13,16 @@ type Props = {
     gifs: gifData
 };
 
+/**
+ * This is a connected component: it gets the redux state and
+ * the action creators so that they can become props
+ * for the downstream components. It also gets the
+ * sort state (ascending or descending) from the store
+ * and sorts the data, so that GifList can display it in the correct order.
+ */
 export class GifListContainer extends Component<Props> {
+
+    // perform the initial data fetch
     componentWillMount() {
         this.props.gifActions.fetchGifs()
     }

@@ -7,7 +7,6 @@ type Props = {
     gifActions: Object,
 };
 
-
 export default class Toolbar extends Component<Props> {
     props: Props;
 

@@ -15,6 +15,16 @@ export function changeGifOrder(order: sortOrder) {
     return {type: types.CHANGE_GIF_ORDER, order};
 }
 
+/** This function takes the search box's HTMLInputElement as its input
+ * and pulls the value off it. If a value is present, it hits the
+ * search endpoint. If no value is present, we can assume the user
+ * was trying to retrieve the trending gifs, and we hit that endpoint
+ * instead. Before the response is returned, it dispatches fetchGifRequest,
+ * which (in the reducer) removes any presently displayed GIFs from the state.
+ * This isn't strictly necessary, but it makes it much clearer visually when
+ * new GIFs have come in. Finally, it dispatches receiveGifs, which just merges
+ * the newly retrieved GIFs onto the state.
+*/
 export function fetchGifs(q: ?HTMLInputElement) {
     const searchUri = 'https://api.giphy.com/v1/gifs/search';
     const trendingUri = 'https://api.giphy.com/v1/gifs/trending';
