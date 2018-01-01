@@ -24,10 +24,10 @@ export default class Search extends Component<Props> {
         gifActions.fetchGifs();
     }
 
-    performSearch(query: ?HTMLInputElement) {
+    performSearch() {
         const {gifActions} = this.props;
         if (this.searchQuery && !this.searchQuery.value) return;
-        gifActions.fetchGifs(query)
+        if (this.searchQuery && this.searchQuery.value) gifActions.fetchGifs(this.searchQuery.value)
     }
 
     render() {
@@ -40,7 +40,7 @@ export default class Search extends Component<Props> {
                     }}/>
                 <button
                     className="search-button submit-button"
-                    onClick={() => this.performSearch(this.searchQuery)}>
+                    onClick={() => this.performSearch()}>
                     Search
                 </button>
                 <button

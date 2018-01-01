@@ -16,19 +16,19 @@ describe('search', () => {
         it('calls the fetchGifs function', () => {
             wrapper.find("input").instance().value = "abc";
             wrapper.find('.submit-button').simulate('click');
-            expect(fetchGifs).toHaveBeenCalledWith(expect.any(HTMLInputElement));
+            expect(fetchGifs).toHaveBeenCalledWith("abc");
         });
     });
 
     describe('clicking the clear button', () => {
        beforeEach(() => {
-           wrapper.find('input').simulate('keydown', { which: 'a' });
+           wrapper.find("input").instance().value = "abc";
        });
 
        it('clears the input and fetches a new batch of trending gifs', () => {
            wrapper.find('.clear-button').simulate('click');
            expect(fetchGifs).toHaveBeenCalled();
-           expect(fetchGifs).not.toHaveBeenCalledWith(expect.any(HTMLInputElement));
+           expect(fetchGifs).not.toHaveBeenCalledWith(expect.any(String));
            expect(wrapper.find('input').props().value).toEqual(undefined)
        });
     });
