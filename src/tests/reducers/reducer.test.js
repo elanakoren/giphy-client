@@ -9,14 +9,14 @@ describe('gifReducer', () => {
         });
     });
 
-    describe('when fetch gif request is dispatched', () => {
+    describe('when reset gifs is dispatched', () => {
         let state, action;
         beforeEach(() => {
             state = {
                 data: ["one"],
                 order: "desc",
             };
-            action = {type: actionTypes.FETCH_GIFS}
+            action = {type: actionTypes.RESET_GIFS}
         });
 
         it('removes the old gifs from the state', () => {

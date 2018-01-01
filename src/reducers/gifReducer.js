@@ -1,12 +1,12 @@
 // @flow
 import initialState from './initialState';
-import {FETCH_GIFS, RECEIVE_GIFS, CHANGE_GIF_ORDER} from '../actions/actionTypes';
+import {RESET_GIFS, RECEIVE_GIFS, CHANGE_GIF_ORDER} from '../actions/actionTypes';
 
 export default function gifs(state: Object = initialState.gifs, action: Object) {
     let newState;
 
     switch (action.type) {
-        case FETCH_GIFS:
+        case RESET_GIFS:
             newState = {order: state.order};
             return newState;
         case RECEIVE_GIFS:

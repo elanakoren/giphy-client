@@ -19,7 +19,6 @@ export default class Search extends Component<Props> {
             this.searchQuery.value = '';
         }
         gifActions.fetchGifs();
-
     }
 
     render() {

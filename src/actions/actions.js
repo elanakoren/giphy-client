@@ -7,8 +7,8 @@ export function receiveGifs(gifs: gifData) {
     return {type: types.RECEIVE_GIFS, gifs};
 }
 
-export function fetchGifRequest() {
-    return {type: types.FETCH_GIFS}
+export function resetGifs() {
+    return {type: types.RESET_GIFS}
 }
 
 export function changeGifOrder(order: sortOrder) {
@@ -19,7 +19,7 @@ export function changeGifOrder(order: sortOrder) {
  * and pulls the value off it. If a value is present, it hits the
  * search endpoint. If no value is present, we can assume the user
  * was trying to retrieve the trending gifs, and we hit that endpoint
- * instead. Before the response is returned, it dispatches fetchGifRequest,
+ * instead. Before the response is returned, it dispatches resetGifs,
  * which (in the reducer) removes any presently displayed GIFs from the state.
  * This isn't strictly necessary, but it makes it much clearer visually when
  * new GIFs have come in. Finally, it dispatches receiveGifs, which just merges
@@ -42,7 +42,7 @@ export function fetchGifs(q: ?HTMLInputElement) {
             json: true
         };
 
-        dispatch(fetchGifRequest());
+        dispatch(resetGifs());
         return rp.get(options)
             .then(response => {
                 return response;

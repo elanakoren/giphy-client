@@ -21,12 +21,12 @@ describe('actions', () => {
        });
     });
 
-    describe('fetchGifRequest', () => {
+    describe('resetGifs', () => {
         it('should create the appropriate action', () => {
             const expectedAction = {
-                type: types.FETCH_GIFS
+                type: types.RESET_GIFS
             };
-            expect(actions.fetchGifRequest()).toEqual(expectedAction);
+            expect(actions.resetGifs()).toEqual(expectedAction);
         })
     });
 
@@ -60,7 +60,7 @@ describe('actions', () => {
             rp.get.mockReturnValue(promise);
 
             const dispatchedActions = [
-                {type: types.FETCH_GIFS},
+                {type: types.RESET_GIFS},
                 {type: types.RECEIVE_GIFS, gifs: response},
             ];
 
