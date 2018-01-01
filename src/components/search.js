@@ -30,7 +30,7 @@ export default class Search extends Component<Props> {
         // accessing its value is another demand imposed by flow.
         if (this.searchQuery && !this.searchQuery.value) return;
         else if (this.searchQuery) {
-            gifActions.fetchGifs(this.searchQuery.value)
+            gifActions.fetchGifs(this.searchQuery.value.toLowerCase())
         }
 
     }
