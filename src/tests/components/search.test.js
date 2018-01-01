@@ -14,6 +14,7 @@ describe('search', () => {
 
     describe('clicking the search button', () => {
         it('calls the fetchGifs function', () => {
+            wrapper.find("input").instance().value = "abc";
             wrapper.find('.submit-button').simulate('click');
             expect(fetchGifs).toHaveBeenCalledWith(expect.any(HTMLInputElement));
         });
