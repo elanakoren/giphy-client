@@ -26,8 +26,13 @@ export default class Search extends Component<Props> {
 
     performSearch() {
         const {gifActions} = this.props;
+        // Don't hit Giphy with an empty search. Checking that this.searchQuery exists before
+        // accessing its value is another demand imposed by flow.
         if (this.searchQuery && !this.searchQuery.value) return;
-        if (this.searchQuery && this.searchQuery.value) gifActions.fetchGifs(this.searchQuery.value)
+        else if (this.searchQuery) {
+            gifActions.fetchGifs(this.searchQuery.value)
+        }
+
     }
 
     render() {

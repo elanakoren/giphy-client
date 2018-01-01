@@ -18,7 +18,7 @@ export class Gif extends Component<Props, State> {
     state: State;
 
     constructor(props: Props) {
-        super();
+        super(props);
         this.state = {expanded: false};
     }
 

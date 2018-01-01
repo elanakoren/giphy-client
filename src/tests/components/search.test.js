@@ -13,10 +13,19 @@ describe('search', () => {
     });
 
     describe('clicking the search button', () => {
-        it('calls the fetchGifs function', () => {
-            wrapper.find("input").instance().value = "abc";
-            wrapper.find('.submit-button').simulate('click');
-            expect(fetchGifs).toHaveBeenCalledWith("abc");
+        describe('when there is text in the search box', () => {
+            it('calls the fetchGifs function', () => {
+                wrapper.find("input").instance().value = "abc";
+                wrapper.find('.submit-button').simulate('click');
+                expect(fetchGifs).toHaveBeenCalledWith("abc");
+            });
+        });
+
+        describe('when there is no text in the search box', () => {
+            it('does NOT call the fetchGifs function', () => {
+                wrapper.find('.submit-button').simulate('click');
+                expect(fetchGifs).not.toHaveBeenCalled();
+            });
         });
     });
 
