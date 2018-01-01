@@ -14,7 +14,7 @@ export class GifList extends Component<Props> {
             return (<Gif
                 key={i}
                 imgSrc={gifDatum.images.fixed_width.url}
-                title={gifDatum.title}
+                rating={gifDatum.rating}
                 username={gifDatum.username}
                 import_datetime={gifDatum.import_datetime}
             />)

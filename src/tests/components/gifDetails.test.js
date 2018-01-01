@@ -8,7 +8,7 @@ describe('gifDetails component', () => {
         let wrapper;
         beforeEach(() => {
             wrapper = shallow(<GifDetails {...{
-                title: 'some-title',
+                rating: 'g',
                 username: 'some-username',
                 showGifDetails: 'show-details',
                 import_datetime: '1970-01-01 00:00:00'
@@ -27,7 +27,7 @@ describe('gifDetails component', () => {
     describe('when hiding gif details', () => {
         it('renders correctly', () => {
             const wrapper = shallow(<GifDetails {...{
-                title: 'some-title',
+                rating: 'g',
                 username: 'some-username',
                 showGifDetails: 'hide-details',
                 import_datetime: '1970-01-01 00:00:00'

@@ -7,14 +7,14 @@ exports[`gifDetails component when hiding gif details renders correctly 1`] = `
   <div
     className="gif-detail-text"
   >
-     title: 
-    some-title
+     rating: 
+    g
      
   </div>
   <div
     className="gif-detail-text"
   >
-     author: 
+     username: 
     some-username
      
   </div>
@@ -34,14 +34,14 @@ exports[`gifDetails component when showing gif details renders correctly 1`] = `
   <div
     className="gif-detail-text"
   >
-     title: 
-    some-title
+     rating: 
+    g
      
   </div>
   <div
     className="gif-detail-text"
   >
-     author: 
+     username: 
     some-username
      
   </div>

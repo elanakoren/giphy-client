@@ -4,7 +4,7 @@ import GifDetails from './gifDetails';
 
 type Props = {
     imgSrc: string,
-    title: string,
+    rating: string,
     username: string,
     import_datetime: string,
 };
@@ -34,7 +34,7 @@ export class Gif extends Component<Props, State> {
     }
 
     render() {
-        const {imgSrc, title, username, import_datetime} = this.props;
+        const {imgSrc, rating, username, import_datetime} = this.props;
         const {expanded} = this.state;
         let showGifDetails = expanded ? 'show-details' : 'hide-details';
         let expandGif = expanded ? 'expanded' : '';
@@ -45,7 +45,7 @@ export class Gif extends Component<Props, State> {
                     className={`gif ${expandGif}`}
                     src={imgSrc}
                     onClick={() => this.onGifClick()}/>
-                <GifDetails {...{title, username, showGifDetails, import_datetime}}/>
+                <GifDetails {...{rating, username, showGifDetails, import_datetime}}/>
             </div>);
     }
 }

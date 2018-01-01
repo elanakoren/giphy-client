@@ -7,7 +7,7 @@ describe('gif component', () => {
     it('renders correctly', () => {
         const wrapper = shallow(<Gif {...{
             imgSrc: 'some-giphy-url',
-            title: 'whoa cool gif',
+            rating: 'g',
             username: 'the best user',
             import_datetime: '1970-01-01 00:00:00'
         }}/>);
@@ -19,7 +19,7 @@ describe('gif component', () => {
         beforeEach(() => {
             wrapper = mount(<Gif {...{
                 imgSrc: 'some-giphy-url',
-                title: 'whoa cool gif',
+                rating: 'g',
                 username: 'the best user',
                 import_datetime: '1970-01-01 00:00:00'
             }}/>);
@@ -56,7 +56,7 @@ describe('gif component', () => {
         beforeEach(() => {
             wrapper = mount(<Gif {...{
                 imgSrc: 'some-giphy-url',
-                title: 'whoa cool gif',
+                rating: 'g',
                 username: 'the best user',
                 import_datetime: '1970-01-01 00:00:00'
             }}/>);
