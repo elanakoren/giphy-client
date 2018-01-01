@@ -15,9 +15,12 @@ export default class Search extends Component<Props> {
 
     clearSearch() {
         const {gifActions} = this.props;
+        // flow demands these type checks
         if (this.searchQuery instanceof HTMLInputElement) {
+            // clear the input box
             this.searchQuery.value = '';
         }
+        // fetch a new batch of trending gifs to replace the ones on the state
         gifActions.fetchGifs();
     }
 

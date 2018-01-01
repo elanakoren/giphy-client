@@ -15,7 +15,7 @@ export function changeGifOrder(order: sortOrder) {
     return {type: types.CHANGE_GIF_ORDER, order};
 }
 
-/** This function takes the search box's HTMLInputElement as its input
+/** This function takes the search box's HTMLInputElement as its (optional) input
  * and pulls the value off it. If a value is present, it hits the
  * search endpoint. If no value is present, we can assume the user
  * was trying to retrieve the trending gifs, and we hit that endpoint

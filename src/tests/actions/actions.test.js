@@ -56,6 +56,7 @@ describe('actions', () => {
         });
 
         it('dispatches actions and passes data to the store', () => {
+            // fake a successful response from the giphy API
             rp.get = jest.fn();
             rp.get.mockReturnValue(promise);
 
@@ -66,6 +67,9 @@ describe('actions', () => {
 
             const store = mockReduxStore({gifs: []});
 
+            // dispatching fetchGifs should cause RESET_GIFS and RECEIVE_GIFS
+            // to be dispatched, and the RECEIVE_GIFS action should
+            // carry the successful response along with it.
             return store.dispatch(actions.fetchGifs()).then(() => {
                 expect(store.getActions()).toEqual(dispatchedActions)
             });
