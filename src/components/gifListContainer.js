@@ -32,20 +32,23 @@ export class GifListContainer extends Component<Props> {
         let gifList;
 
         const gifDataAvailable = (gifs.data && gifs.data.length > 0);
+        let resultCount;
 
         if (gifDataAvailable && gifs.order === 'asc') {
             gifs.data.sort(sortByDateAscending);
             gifList = (<GifList gifData={gifs.data}/>);
+            resultCount = gifs.data.length;
         }
 
         else if (gifDataAvailable) {
             gifs.data.sort(sortByDateDescending);
             gifList = (<GifList gifData={gifs.data}/>);
+            resultCount = gifs.data.length;
         }
 
         return (
             <div>
-                <Toolbar {...{gifActions}}/>
+                <Toolbar {...{gifActions, resultCount}}/>
                 {gifList}
             </div>
         );

@@ -4,6 +4,9 @@ exports[`gifList renders correctly 1`] = `
 <div
   className="toolbar-grid"
 >
+  <ResultCount
+    resultCount={25}
+  />
   <Search
     gifActions={
       Object {

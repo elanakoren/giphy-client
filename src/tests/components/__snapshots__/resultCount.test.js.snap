@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resultCount when not passed a count renders correctly 1`] = `
+<div
+  className="results-count"
+>
+  <span
+    className="result"
+  >
+    0 result(s) found
+  </span>
+</div>
+`;
+
+exports[`resultCount when passed a count renders correctly 1`] = `
+<div
+  className="results-count"
+>
+  <span
+    className="result"
+  >
+    25 result(s) found
+  </span>
+</div>
+`;

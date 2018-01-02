@@ -32,6 +32,7 @@
 
 .sort-control {
     margin-left: 20px;
+    margin-top: 5px;
 }
 
 .hide-details {
@@ -65,6 +66,23 @@
 .sort-dropdown {
     height: 25px;
     line-height: 25px;
+}
+
+.results-count {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.result {
+    font-size: 13px;
+}
+
+.grid {
+    margin-top: 70px;
+}
+
+.search-control {
+    margin-top: 5px;
 }
 
 body {

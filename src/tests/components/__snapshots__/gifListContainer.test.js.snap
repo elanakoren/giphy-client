@@ -12,6 +12,7 @@ exports[`gifListContainer the unconnected component matches the snapshot 1`] = `
         },
       }
     }
+    resultCount={3}
   />
   <GifList
     gifData={
