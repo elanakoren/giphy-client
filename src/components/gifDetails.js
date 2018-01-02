@@ -9,7 +9,7 @@ type Props = {
     showGifDetails: 'show-details' | 'hide-details',
 }
 
-export default class GifDetails extends Component<Props> {
+export class GifDetails extends Component<Props> {
     props: Props;
 
     render() {

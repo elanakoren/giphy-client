@@ -5,7 +5,7 @@ type Props = {
     gifActions: Object
 }
 
-export default class Search extends Component<Props> {
+export class Search extends Component<Props> {
     searchQuery: ?HTMLInputElement | null;
 
     constructor(props: Props) {

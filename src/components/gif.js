@@ -1,6 +1,6 @@
 // @flow
 import React, {Component} from 'react';
-import GifDetails from './gifDetails';
+import {GifDetails} from './gifDetails';
 
 type Props = {
     imgSrc: string,

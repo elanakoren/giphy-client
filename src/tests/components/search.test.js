@@ -1,6 +1,6 @@
 //@flow
 import React from 'react';
-import Search from '../../components/search';
+import {Search} from '../../components/search';
 import {mount, shallow} from 'enzyme';
 
 describe('search', () => {

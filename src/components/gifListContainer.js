@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import * as gifActions from '../actions/actions';
 import React, {Component} from 'react';
 import {GifList} from './gifList';
-import Toolbar from './toolbar';
+import {Toolbar} from './toolbar';
 import type {gifData} from '../types';
 import {sortByDateAscending, sortByDateDescending} from '../helpers/sortHelper';
 

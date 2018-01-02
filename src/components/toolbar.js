@@ -1,7 +1,7 @@
 // @flow
 import React, {Component} from 'react';
 import {SortBar} from './sortBar';
-import Search from './search';
+import {Search} from './search';
 import {ResultCount} from './resultCount';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
     resultCount: number
 };
 
-export default class Toolbar extends Component<Props> {
+export class Toolbar extends Component<Props> {
     props: Props;
 
     render() {

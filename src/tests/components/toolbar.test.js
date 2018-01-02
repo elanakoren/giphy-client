@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import Toolbar from '../../components/toolbar';
+import {Toolbar} from '../../components/toolbar';
 import {shallow} from 'enzyme';
 
 describe('gifList', () => {
