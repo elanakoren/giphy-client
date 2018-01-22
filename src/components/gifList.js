@@ -12,7 +12,7 @@ export class GifList extends Component<Props> {
         const {gifData} = this.props;
         const gifs = gifData.map((gifDatum, i) => {
             return (<Gif
-                key={i}
+                key={gifDatum.images.fixed_width.url}
                 imgSrc={gifDatum.images.fixed_width.url}
                 rating={gifDatum.rating}
                 username={gifDatum.username}
