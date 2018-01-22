@@ -35,13 +35,13 @@ export class GifListContainer extends Component<Props> {
         let resultCount;
 
         if (gifDataAvailable && gifs.order === 'asc') {
-            gifs.data.sort(sortByDateAscending);
+            gifs.data.slice().sort(sortByDateAscending);
             gifList = (<GifList gifData={gifs.data}/>);
             resultCount = gifs.data.length;
         }
 
         else if (gifDataAvailable) {
-            gifs.data.sort(sortByDateDescending);
+            gifs.data.slice().sort(sortByDateDescending);
             gifList = (<GifList gifData={gifs.data}/>);
             resultCount = gifs.data.length;
         }
