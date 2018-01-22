@@ -23,7 +23,7 @@ type Props = {
 export class GifListContainer extends Component<Props> {
 
     // perform the initial data fetch
-    componentWillMount() {
+    componentDidMount() {
         this.props.gifActions.fetchGifs()
     }
 
@@ -35,13 +35,13 @@ export class GifListContainer extends Component<Props> {
         let resultCount;
 
         if (gifDataAvailable && gifs.order === 'asc') {
-            gifs.data.slice().sort(sortByDateAscending);
+            gifs.data.sort(sortByDateAscending);
             gifList = (<GifList gifData={gifs.data}/>);
             resultCount = gifs.data.length;
         }
 
         else if (gifDataAvailable) {
-            gifs.data.slice().sort(sortByDateDescending);
+            gifs.data.sort(sortByDateDescending);
             gifList = (<GifList gifData={gifs.data}/>);
             resultCount = gifs.data.length;
         }

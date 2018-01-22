@@ -1,6 +1,6 @@
 // @flow
 import moment from 'moment';
-import type {gifDatum} from '../types';
+import type {gifDatum, sortOrder} from '../types';
 
 // takes a list of gifDatum and returns it, newest-to-oldest
 export function sortByDateDescending(firstGifDatum: gifDatum, secondGifDatum: gifDatum) {
@@ -12,7 +12,7 @@ export function sortByDateAscending(firstGifDatum: gifDatum, secondGifDatum: gif
     return sortByDate(firstGifDatum, secondGifDatum, 'asc')
 }
 
-function sortByDate(firstGifDatum: gifDatum, secondGifDatum: gifDatum, sort: string) {
+function sortByDate(firstGifDatum: gifDatum, secondGifDatum: gifDatum, sort: sortOrder) {
     let firstGifDate = moment(firstGifDatum.import_datetime).format();
     let secondGifDate = moment(secondGifDatum.import_datetime).format();
 

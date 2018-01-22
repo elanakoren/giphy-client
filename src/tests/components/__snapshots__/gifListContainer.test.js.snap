@@ -50,10 +50,10 @@ exports[`gifListContainer the unconnected component matches the snapshot 1`] = `
           "id": "abc",
           "images": Object {
             "fixed_width": Object {
-              "url": "some_second_url",
+              "url": "some_third_url",
             },
           },
-          "import_datetime": "1970-01-01 00:00:00",
+          "import_datetime": "2013-07-29 23:51:22",
           "is_indexable": 0,
           "is_sticker": 1,
           "rating": "g",
@@ -61,7 +61,7 @@ exports[`gifListContainer the unconnected component matches the snapshot 1`] = `
           "source": "abc",
           "source_post_url": "abc",
           "source_tld": "abc",
-          "title": "oldest",
+          "title": "middle",
           "trending_datetime": "abc",
           "type": "abc",
           "url": "abc",
@@ -75,10 +75,10 @@ exports[`gifListContainer the unconnected component matches the snapshot 1`] = `
           "id": "abc",
           "images": Object {
             "fixed_width": Object {
-              "url": "some_third_url",
+              "url": "some_second_url",
             },
           },
-          "import_datetime": "2013-07-29 23:51:22",
+          "import_datetime": "1970-01-01 00:00:00",
           "is_indexable": 0,
           "is_sticker": 1,
           "rating": "g",
@@ -86,7 +86,7 @@ exports[`gifListContainer the unconnected component matches the snapshot 1`] = `
           "source": "abc",
           "source_post_url": "abc",
           "source_tld": "abc",
-          "title": "middle",
+          "title": "oldest",
           "trending_datetime": "abc",
           "type": "abc",
           "url": "abc",

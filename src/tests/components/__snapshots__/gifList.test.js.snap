@@ -7,21 +7,21 @@ exports[`gifList renders correctly 1`] = `
   <Gif
     imgSrc="some_url"
     import_datetime="2017-12-28 23:00:01"
-    key="0"
+    key="some_url"
     rating="g"
     username="abc"
   />
   <Gif
     imgSrc="some_second_url"
     import_datetime="1970-01-01 00:00:00"
-    key="1"
+    key="some_second_url"
     rating="g"
     username="abc"
   />
   <Gif
     imgSrc="some_third_url"
     import_datetime="2013-07-29 23:51:22"
-    key="2"
+    key="some_third_url"
     rating="g"
     username="abc"
   />
