@@ -47,9 +47,9 @@ export function fetchGifs(q: ?string) {
             .then(response => {
                 return response;
             })
+            .then(gifs => dispatch(receiveGifs(gifs)))
             .catch(error => {
                 console.log(error);
             })
-            .then(gifs => dispatch(receiveGifs(gifs)))
     };
 }
